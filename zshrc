@@ -102,3 +102,26 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
+
+# for ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+# for scala
+export SCALA_HOME="/usr/local/scala-2.12.17"
+export PATH=$PATH:$M2_HOME/bin:$SCALA_HOME/bin
+
+# for kafka
+export KAFKA_HOME="~/opt/kafka_2.11-2.0.0"
+export PATH=$KAFKA_HOME/bin:$PATH
+
+# for pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+source /Users/liuxing/.docker/init-zsh.sh || true # Added by Docker Desktop
+export PATH="/usr/local/sbin:$PATH"
+
+# for nvm
